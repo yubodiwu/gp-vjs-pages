@@ -1,2 +1,1 @@
-# Portfolio
 # yubodiwu.github.io
