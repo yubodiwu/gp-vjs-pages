@@ -4,9 +4,41 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
-    <link rel="stylesheet" href="style.css">
+    <meta
+      name="description"
+      content="GP SWS Asia Stream"
+    />
+    <style>
+      .big-play-toggle, .vjs-playback-rate, .vjs-progress-control {
+        display: none !important;
+      }
+    </style>
     <title>GP SWS</title>
   </head>
   <body>
-    <iframe class="gp-stream" src="https://gpmandarin.online.church" frameborder="0"></iframe>
+    <stream controls autoplay muted id="cloudflare-stream"></stream>
+    <script data-cfasync="false" defer type="text/javascript" src="https://embed.cloudflarestream.com/embed/r4xu.fla9.latest.js?video=5d5bc37ffcf54c9b82e996823bffbb81"></script>
+    <script>
+      function getParameterByName(name, url) {
+        if (!url) url = window.location.href;
+        name = name.replace(/[\[\]]/g, '\\$&');
+        var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+            results = regex.exec(url);
+        if (!results) return null;
+        if (!results[2]) return '';
+        return decodeURIComponent(results[2].replace(/\+/g, ' '));
+      }
+
+      var stream = document.getElementById('cloudflare-stream');
+      console.log('stream is ', stream);
+      
+      var src = getParameterByName('src');
+      var currentTime = Math.floor(new Date().getTime() / 1000);
+      var startTimestamp = getParameterByName('startTimestamp');
+      stream.setAttribute('src', src);
+      stream.currentTime = currentTime - startTimestamp;
+
+      console.log(currentTime - startTimestamp);
+    </script>
+  </body>
 </html>
