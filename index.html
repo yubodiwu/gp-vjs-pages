@@ -35,6 +35,9 @@
       var startTimestamp = getParameterByName('startTimestamp');
 
       stream.setAttribute('src', src);
+      stream.addEventListener('pause', function () {
+        stream.play();
+      })
 
       $.ajax({
         url: 'http://worldtimeapi.org/api/timezone/PST8PDT',
