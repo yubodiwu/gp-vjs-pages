@@ -17,6 +17,7 @@
   </head>
   <body>
     <stream controls autoplay muted id="cloudflare-stream"></stream>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script data-cfasync="false" defer type="text/javascript" src="https://embed.cloudflarestream.com/embed/r4xu.fla9.latest.js?video=5d5bc37ffcf54c9b82e996823bffbb81"></script>
     <script>
       function getParameterByName(name, url) {
@@ -30,15 +31,33 @@
       }
 
       var stream = document.getElementById('cloudflare-stream');
-      console.log('stream is ', stream);
-      
       var src = getParameterByName('src');
-      var currentTime = Math.floor(new Date().getTime() / 1000);
       var startTimestamp = getParameterByName('startTimestamp');
-      stream.setAttribute('src', src);
-      stream.currentTime = currentTime - startTimestamp;
 
-      console.log(currentTime - startTimestamp);
+      stream.setAttribute('src', src);
+
+      $.ajax({
+        url: 'http://worldtimeapi.org/api/timezone/PST8PDT',
+        timeout: 3000,
+        success: function (json) {
+          if (json.unixtime) {
+            var currentTime = json.unixtime;
+            stream.setAttribute('src', src);
+            stream.currentTime = currentTime - startTimestamp;
+          } else {
+            var currentTime = Math.floor(Date.now() / 1000);
+            stream.setAttribute('src', src);
+            stream.currentTime = currentTime - startTimestamp;
+          }
+          console.log(`starting from ${currentTime - startTimestamp} seconds`);
+        },
+        error: function () {
+          var currentTime = Math.floor(Date.now() / 1000);
+          stream.setAttribute('src', src);
+          stream.currentTime = currentTime - startTimestamp;
+          console.log(`starting from ${currentTime - startTimestamp} seconds`);
+        },
+      });
     </script>
   </body>
 </html>
