@@ -1,4 +1,4 @@
-# yubodiwu.github.io
+# GP Mandarin Player
 
 This is currently being used to host the HTML we pass to the online church platform to implement a [Cloudflare stream player](https://www.cloudflare.com/products/cloudflare-stream/).
 
