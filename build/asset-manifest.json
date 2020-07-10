@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/yubodiwu.github.io/static/css/main.d0ee7a36.chunk.css",
-    "main.js": "/yubodiwu.github.io/static/js/main.f3df6fb7.chunk.js",
-    "main.js.map": "/yubodiwu.github.io/static/js/main.f3df6fb7.chunk.js.map",
-    "runtime-main.js": "/yubodiwu.github.io/static/js/runtime-main.3196e67e.js",
-    "runtime-main.js.map": "/yubodiwu.github.io/static/js/runtime-main.3196e67e.js.map",
-    "static/css/2.22fc193c.chunk.css": "/yubodiwu.github.io/static/css/2.22fc193c.chunk.css",
-    "static/js/2.3f291ac9.chunk.js": "/yubodiwu.github.io/static/js/2.3f291ac9.chunk.js",
-    "static/js/2.3f291ac9.chunk.js.map": "/yubodiwu.github.io/static/js/2.3f291ac9.chunk.js.map",
-    "index.html": "/yubodiwu.github.io/index.html",
-    "precache-manifest.dfe344835acc769fe97e31d3d5397fe8.js": "/yubodiwu.github.io/precache-manifest.dfe344835acc769fe97e31d3d5397fe8.js",
-    "service-worker.js": "/yubodiwu.github.io/service-worker.js",
-    "static/css/2.22fc193c.chunk.css.map": "/yubodiwu.github.io/static/css/2.22fc193c.chunk.css.map",
-    "static/css/main.d0ee7a36.chunk.css.map": "/yubodiwu.github.io/static/css/main.d0ee7a36.chunk.css.map",
-    "static/js/2.3f291ac9.chunk.js.LICENSE.txt": "/yubodiwu.github.io/static/js/2.3f291ac9.chunk.js.LICENSE.txt"
+    "main.css": "/yubodiwu.github.io/gp-mandarin-player/static/css/main.d0ee7a36.chunk.css",
+    "main.js": "/yubodiwu.github.io/gp-mandarin-player/static/js/main.e6cf4f86.chunk.js",
+    "main.js.map": "/yubodiwu.github.io/gp-mandarin-player/static/js/main.e6cf4f86.chunk.js.map",
+    "runtime-main.js": "/yubodiwu.github.io/gp-mandarin-player/static/js/runtime-main.1500e9ef.js",
+    "runtime-main.js.map": "/yubodiwu.github.io/gp-mandarin-player/static/js/runtime-main.1500e9ef.js.map",
+    "static/css/2.22fc193c.chunk.css": "/yubodiwu.github.io/gp-mandarin-player/static/css/2.22fc193c.chunk.css",
+    "static/js/2.3f291ac9.chunk.js": "/yubodiwu.github.io/gp-mandarin-player/static/js/2.3f291ac9.chunk.js",
+    "static/js/2.3f291ac9.chunk.js.map": "/yubodiwu.github.io/gp-mandarin-player/static/js/2.3f291ac9.chunk.js.map",
+    "index.html": "/yubodiwu.github.io/gp-mandarin-player/index.html",
+    "precache-manifest.7cc96de25641ec2111f66cc9560829aa.js": "/yubodiwu.github.io/gp-mandarin-player/precache-manifest.7cc96de25641ec2111f66cc9560829aa.js",
+    "service-worker.js": "/yubodiwu.github.io/gp-mandarin-player/service-worker.js",
+    "static/css/2.22fc193c.chunk.css.map": "/yubodiwu.github.io/gp-mandarin-player/static/css/2.22fc193c.chunk.css.map",
+    "static/css/main.d0ee7a36.chunk.css.map": "/yubodiwu.github.io/gp-mandarin-player/static/css/main.d0ee7a36.chunk.css.map",
+    "static/js/2.3f291ac9.chunk.js.LICENSE.txt": "/yubodiwu.github.io/gp-mandarin-player/static/js/2.3f291ac9.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.3196e67e.js",
+    "static/js/runtime-main.1500e9ef.js",
     "static/css/2.22fc193c.chunk.css",
     "static/js/2.3f291ac9.chunk.js",
     "static/css/main.d0ee7a36.chunk.css",
-    "static/js/main.f3df6fb7.chunk.js"
+    "static/js/main.e6cf4f86.chunk.js"
   ]
 }
