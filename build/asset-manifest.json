@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/yubodiwu.github.io/gp-mandarin-player/static/css/main.d0ee7a36.chunk.css",
-    "main.js": "/yubodiwu.github.io/gp-mandarin-player/static/js/main.e6cf4f86.chunk.js",
-    "main.js.map": "/yubodiwu.github.io/gp-mandarin-player/static/js/main.e6cf4f86.chunk.js.map",
-    "runtime-main.js": "/yubodiwu.github.io/gp-mandarin-player/static/js/runtime-main.1500e9ef.js",
-    "runtime-main.js.map": "/yubodiwu.github.io/gp-mandarin-player/static/js/runtime-main.1500e9ef.js.map",
-    "static/css/2.22fc193c.chunk.css": "/yubodiwu.github.io/gp-mandarin-player/static/css/2.22fc193c.chunk.css",
-    "static/js/2.3f291ac9.chunk.js": "/yubodiwu.github.io/gp-mandarin-player/static/js/2.3f291ac9.chunk.js",
-    "static/js/2.3f291ac9.chunk.js.map": "/yubodiwu.github.io/gp-mandarin-player/static/js/2.3f291ac9.chunk.js.map",
-    "index.html": "/yubodiwu.github.io/gp-mandarin-player/index.html",
-    "precache-manifest.7cc96de25641ec2111f66cc9560829aa.js": "/yubodiwu.github.io/gp-mandarin-player/precache-manifest.7cc96de25641ec2111f66cc9560829aa.js",
-    "service-worker.js": "/yubodiwu.github.io/gp-mandarin-player/service-worker.js",
-    "static/css/2.22fc193c.chunk.css.map": "/yubodiwu.github.io/gp-mandarin-player/static/css/2.22fc193c.chunk.css.map",
-    "static/css/main.d0ee7a36.chunk.css.map": "/yubodiwu.github.io/gp-mandarin-player/static/css/main.d0ee7a36.chunk.css.map",
-    "static/js/2.3f291ac9.chunk.js.LICENSE.txt": "/yubodiwu.github.io/gp-mandarin-player/static/js/2.3f291ac9.chunk.js.LICENSE.txt"
+    "main.css": "/gp-vjs-pages/static/css/main.c55cb5ed.chunk.css",
+    "main.js": "/gp-vjs-pages/static/js/main.d0bc97f2.chunk.js",
+    "main.js.map": "/gp-vjs-pages/static/js/main.d0bc97f2.chunk.js.map",
+    "runtime-main.js": "/gp-vjs-pages/static/js/runtime-main.56b0f95f.js",
+    "runtime-main.js.map": "/gp-vjs-pages/static/js/runtime-main.56b0f95f.js.map",
+    "static/css/2.22fc193c.chunk.css": "/gp-vjs-pages/static/css/2.22fc193c.chunk.css",
+    "static/js/2.3f291ac9.chunk.js": "/gp-vjs-pages/static/js/2.3f291ac9.chunk.js",
+    "static/js/2.3f291ac9.chunk.js.map": "/gp-vjs-pages/static/js/2.3f291ac9.chunk.js.map",
+    "index.html": "/gp-vjs-pages/index.html",
+    "precache-manifest.cf4223defb2bbeaa6482ef441caa0d1b.js": "/gp-vjs-pages/precache-manifest.cf4223defb2bbeaa6482ef441caa0d1b.js",
+    "service-worker.js": "/gp-vjs-pages/service-worker.js",
+    "static/css/2.22fc193c.chunk.css.map": "/gp-vjs-pages/static/css/2.22fc193c.chunk.css.map",
+    "static/css/main.c55cb5ed.chunk.css.map": "/gp-vjs-pages/static/css/main.c55cb5ed.chunk.css.map",
+    "static/js/2.3f291ac9.chunk.js.LICENSE.txt": "/gp-vjs-pages/static/js/2.3f291ac9.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.1500e9ef.js",
+    "static/js/runtime-main.56b0f95f.js",
     "static/css/2.22fc193c.chunk.css",
     "static/js/2.3f291ac9.chunk.js",
-    "static/css/main.d0ee7a36.chunk.css",
-    "static/js/main.e6cf4f86.chunk.js"
+    "static/css/main.c55cb5ed.chunk.css",
+    "static/js/main.d0bc97f2.chunk.js"
   ]
 }

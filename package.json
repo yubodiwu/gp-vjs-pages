@@ -2,7 +2,7 @@
   "name": "player-poc",
   "version": "0.1.0",
   "private": true,
-  "homepage": "yubodiwu.github.io/gp-mandarin-player",
+  "homepage": "https://yubodiwu.github.io/gp-vjs-pages",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
@@ -13,6 +13,8 @@
     "video.js": "^7.8.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -34,6 +36,7 @@
     ]
   },
   "devDependencies": {
+    "gh-pages": "^3.1.0",
     "react-snapshot": "^1.3.0"
   }
 }

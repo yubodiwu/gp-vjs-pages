@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import videojs from "video.js";
 import "video.js/dist/video-js.css";
 import "./App.css";
@@ -12,6 +12,7 @@ class VideoPlayer extends React.Component {
     const startTimestamp = queryParams.get('startTimestamp') || 0;
 
     this.state = {
+      muted: true,
       src: '',
       startTime: 0,
       sources: queryParams.has('src') ? sources : null,
@@ -21,9 +22,13 @@ class VideoPlayer extends React.Component {
 
   componentDidMount() {
     // instantiate Video.js
-    this.player = videojs(this.videoNode, { ...this.props, sources: this.state.sources, muted: true }, function onPlayerReady() {
-      console.log("onPlayerReady", this);
-    });
+    this.player = videojs(
+      this.videoNode,
+      { ...this.props, sources: this.state.sources, muted: this.state.muted },
+      function onPlayerReady() {
+        console.log("onPlayerReady", this);
+      }
+    );
     setTimeout(() => this.player.play(), 1000);
     this.player.currentTime(Math.floor(Date.now() / 1000) - this.state.startTimestamp);
   }
@@ -45,7 +50,19 @@ class VideoPlayer extends React.Component {
           <video
             ref={(node) => (this.videoNode = node)}
             className="video-js vjs-theme-city vjs-16-9"
-          ></video>
+          />
+        </div>
+        <div className="unmute-container">
+          {this.state.muted &&
+            <button
+              className="unmute-button"
+              onClick={() => {
+                this.player.muted(false);
+                this.setState({ muted: false });
+              }}
+            >
+              tap to unmute
+            </button>}
         </div>
       </div>
     );
