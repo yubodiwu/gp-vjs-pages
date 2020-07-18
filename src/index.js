@@ -1,13 +1,12 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import { render } from 'react-snapshot';
 import './index.css';
-import App from './App';
 import * as serviceWorker from './serviceWorker';
+import CloudflareStream from './CloudflareStream';
 
 render(
   <React.StrictMode>
-    <App />
+    <CloudflareStream />
   </React.StrictMode>,
   document.getElementById('root')
 );
