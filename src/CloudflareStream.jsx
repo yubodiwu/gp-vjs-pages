@@ -1,35 +1,33 @@
-import React, { useState, useEffect, useRef, MutableRefObject } from 'react';
-import { Stream, HTMLStreamElement } from '@cloudflare/stream-react';
+import React, { useState, useEffect, useRef } from 'react';
+import { Stream } from '@cloudflare/stream-react';
 import './CloudflareStream.css';
+
+const setCurrentTime = (query, setStartTime) => {
+  const startTimestamp = parseInt(query.get('startTimestamp') || '0');
+  setStartTime(Math.floor(Date.now() / 1000) - startTimestamp);
+};
 
 const CloudflareStream = () => {
   const [muted, setMuted] = useState(true);
   const [startTime, setStartTime] = useState(0);
   const [src, setSrc] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
-  const streamRef = useRef<HTMLStreamElement>(null) as MutableRefObject<HTMLStreamElement>;
+  const streamRef = useRef(null);
   console.log(document.location.search);
   
   const query = new URLSearchParams(document.location.search);
-  console.log(query);
-  
-  console.log(parseInt(query.get('startTimestamp') || '0'));
-  
 
   useEffect(() => {
     streamRef.current?.classList.add('stream');
-    
+
     try {
-      const startTimestamp: number = parseInt(query.get('startTimestamp') || '0');
-      console.log('start time is ', Math.floor(Date.now() / 1000) - startTimestamp);
-      
-      setStartTime(Math.floor(Date.now() / 1000) - startTimestamp);
+      setCurrentTime(query, setStartTime);
       setSrc(query.get('src') || '');
     } catch (err) {
       setErrorMessage('something went wrong');
       console.error(err);
     }
-  }, [streamRef, setStartTime, query]);
+  }, [streamRef, setStartTime, query, startTime]);
 
   return (errorMessage === '' ?
     <>
@@ -43,6 +41,10 @@ const CloudflareStream = () => {
         src={src}
         streamRef={streamRef}
         onPause={() => streamRef.current.play()}
+        onError={() => setCurrentTime(query, setStartTime)}
+        onPlaying={() => setCurrentTime(query, setStartTime)}
+        onSeeked={() => setCurrentTime(query, setStartTime)}
+        onSeeking={() => setCurrentTime(query, setStartTime)}
       />
     </>
     : <p>{errorMessage}</p>

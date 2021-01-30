@@ -6,6 +6,10 @@
   display: none !important;
 }
 
+.vjs-playback-rate.vjs-menu-button-popup.vjs-button {
+  display: none !important;
+}
+
 .unmute-button {
   display: inline-block;
   border: none;
